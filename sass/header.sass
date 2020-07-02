@@ -1,0 +1,40 @@
+.header 
+  background: $blue
+
+  &__inner
+    grid-column-start: 2
+    grid-column-end: 3
+
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+
+.translate__button
+  +font('Open Sans', 400, 1.4rem)
+  color: white 
+  text-transform: uppercase
+  background: transparent
+  border: 1px solid white   
+  
+  padding: .4rem 1.4rem
+
+  transition: all .2s linear
+
+  margin-right: 5.5rem
+
+  &:hover 
+    background: white
+    color: $blue
+
+@media (max-width: 1407px)
+  .translate__button 
+    margin-right: 4rem
+
+@media (max-width: 1282px)
+  .translate__button 
+    margin-right: 2.5rem  
+    
+@media (max-width: 1245px)
+  .header__inner 
+    justify-content: center    
+

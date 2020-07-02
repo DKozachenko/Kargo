@@ -1,0 +1,9 @@
+@mixin font($name, $style, $size)
+  font-family: $name
+  font-weight: $style
+  font-size: $size
+
+@mixin grid($width, $gap) 
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax($width, 1fr))
+  grid-gap: $gap 

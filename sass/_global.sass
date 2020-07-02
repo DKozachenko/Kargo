@@ -1,0 +1,100 @@
+.title 
+  +font('Open Sans', 400, 3rem)
+  color: #3A3A3A
+
+  &.title_white 
+    color: white
+
+.text 
+  +font('Open Sans', 300, 1.9rem)    
+
+input,
+textarea 
+  +font('Open Sans', 300, 1.3rem) 
+  border: 1px solid #C1C4C7
+  border-radius: 0
+  padding: 1.5rem  
+
+textarea 
+  resize: 0  
+
+.button
+  +font('Open Sans', 600, 1.4rem)   
+  color: white
+  text-transform: uppercase
+  text-align: center
+  background: $red
+  border: 2px solid $red
+  border-radius: .4rem
+  padding: 1.5rem 3.3rem
+
+  transition: all .2s linear
+
+  &:hover 
+    background: transparent
+    color: $red
+
+  &.transparent
+    background: transparent
+    color: $red
+
+    &:hover 
+      background: $red
+      color: white  
+
+.count,
+.trace,
+.phone,
+.mail 
+  display: flex
+  align-items: center
+
+  margin-right: 4rem
+
+  span,
+  a
+    +font('Open Sans', 400, 1.4rem)
+    color: white
+
+    margin-left: 0.6rem
+
+    text-decoration: none
+
+    transition: all .2s linear
+
+    &:hover 
+      cursor: pointer
+
+      color: lighten($blue, 30%)
+
+.trace 
+  margin-right: 10rem 
+
+.phone 
+  margin-right: 2rem 
+
+  a
+    font-weight: 600
+
+.mail
+  margin-right: 0    
+
+@media (max-width: 1407px)
+  .count,
+  .trace,
+  .phone,
+  .mail   
+    margin-right: 2.5rem  
+
+  .mail
+    margin-right: 0 
+
+@media (max-width: 1282px)
+  .count,
+  .trace,
+  .phone,
+  .mail   
+    margin-right: 2rem  
+
+  .mail
+    margin-right: 0     

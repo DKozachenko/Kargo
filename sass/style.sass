@@ -1,0 +1,51 @@
+@import "_vars"
+@import "_mixins"
+
+html 
+  font-size: 10px
+
+*,
+*:after,
+*:before 
+  box-sizing: border-box
+
+body 
+  display: grid
+  grid-template-areas: "space1 content space2" "space1 content space2" "space1 content space2"
+  grid-template-rows: 7vh 1fr 15vh
+
+header,
+main,
+footer 
+  grid-column-start: 1
+  grid-column-end: -1
+
+  display: grid
+  grid-template-columns: 10% 1fr 10%
+
+@media (max-width: 1245px)
+  body 
+    grid-template-rows: 12vh 1fr 15vh  
+
+@media (max-width: 768px)  
+  header,
+  main,
+  footer
+    grid-template-columns: 5% 1fr 5%  
+
+@media (max-width: 768px)  
+  body 
+    grid-template-rows: 15vh 1fr 15vh 
+
+@media (max-width: 500px)  
+  header,
+  main,
+  footer
+    grid-template-columns: 3% 1fr 3%    
+
+@media (max-width: 446px)  
+  body 
+    grid-template-rows: 20vh 1fr 15vh           
+
+@import "_global"     
+@import "header"  
