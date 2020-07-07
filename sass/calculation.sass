@@ -1,0 +1,182 @@
+.calculation 
+  &__inner
+    grid-column-start: 2
+    grid-column-end: 3
+
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &-content 
+      width: 100%
+      background: url(../css/images/calculation/bg.png) 0 0 no-repeat
+      background-size: contain
+
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+
+      padding: 14rem 0 5rem 0
+
+    &-button
+      position: relative
+      top: -3rem  
+
+  .title 
+    margin-bottom: 2rem  
+
+.calc__item
+  &:last-child
+    margin-top: 2rem
+
+    span
+      +font('Open Sans', 400, 1.4rem)
+      margin-right: 1rem
+
+    .calc__item-title 
+      text-align: center
+      margin-bottom: 1rem
+
+  &:not(:last-child)
+    width: 100%
+    max-width: 26rem 
+
+  &-title 
+    +font('Open Sans', 700, 1.6rem)
+    color: #3A3A3A    
+
+    margin-bottom: 0.4rem
+
+.width,
+.length,
+.height 
+  max-width: 7rem
+
+.weight,
+.size 
+  max-width: 9.5rem   
+
+.width,
+.length
+  margin-right: 1rem
+
+.height,
+.weight
+  margin-right: 2rem       
+
+.select   
+  position: relative
+
+  &::after
+    content: ''
+    position: absolute
+    display: block
+    width: 14%
+    height: 100%
+
+    top: 0
+    right: 0
+    z-index: 1
+
+    background: url(../css/images/calculation/arrow.png) center no-repeat, #F3F3F3
+    border: 1px solid #C1C4C7
+
+  select 
+    +font('Open Sans', 300, 1.3rem) 
+    color: #616467
+    border: 1px solid #C1C4C7
+    border-radius: 0
+    padding: 1.5rem 3.3rem 1.5rem 1.5rem 
+
+    width: 100%  
+    position: relative
+
+    appearance: none
+
+    transition: all .2s linear
+
+    &:focus
+      border-color: blue
+
+    option
+      background: #F3F3F3
+      +font('Open Sans', 300, 1.3rem) 
+      color: #616467
+
+      width: 100%
+      max-width: 26rem 
+
+@media (max-width: 1360px)
+  .calculation__inner-content
+    background-position-y: 1.7rem    
+
+  .calc__item
+    &:not(:last-child)
+      max-width: 24rem 
+
+  .select 
+    select 
+      option 
+        max-width: 24rem    
+
+@media (max-width: 1300px)
+  .calculation__inner-content
+    background-position-y: 3.7rem    
+
+  .calc__item
+    &:not(:last-child)
+      max-width: 22.5rem 
+
+  .select 
+    select 
+      option 
+        max-width: 22.5rem      
+
+@media (max-width: 1200px)
+  .calculation__inner-content
+    background: none  
+    padding: 2rem 1rem 
+
+    margin-bottom: 2rem
+
+    border: 1px solid #E93B3B
+
+  .calc__item
+    &:not(:last-child)
+      max-width: 20rem
+      
+  .select 
+    select 
+      option 
+        max-width: 20rem            
+
+  .calculation__inner-button
+    position: static  
+    
+@media (max-width: 1027px)
+  .calc__item
+    &:nth-child(4)
+      margin-top: 1rem  
+
+@media (max-width: 979px)
+  .width 
+      margin-bottom: 1rem            
+
+@media (max-width: 691px)
+  .calc__item
+    &:nth-child(3)
+      margin-top: 1rem
+
+@media (max-width: 457px)
+  .height 
+      margin-bottom: 1rem            
+
+@media (max-width: 448px)
+  .calc__item
+    &:not(:first-child)
+      margin-top: 1rem     
+
+@media (max-width: 345px) 
+  .calculation 
+    .title
+      text-align: center      

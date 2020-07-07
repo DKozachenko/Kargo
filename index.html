@@ -242,6 +242,93 @@
         </div>
       </div>
     </section>
+
+    <section class="calculation">
+      <div class="calculation__inner">
+        <h3 class="title">Калькулятор доставки</h3>
+
+        <div class="calculation__inner-content calc">
+          <div class="calc__item">
+            <div class="calc__item-title">Выдача товара</div>
+
+            <div class="select">
+              <select class="extradition">
+                <option data-koef="1.25">Забайкалье</option>
+                <option data-koef="1">Москва и МО</option>
+                <option data-koef="1.5">Дальний Восток</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc__item">
+            <div class="calc__item-title">Вид товара:</div>
+
+            <div class="select">
+              <select class="kind">
+                <option data-koef="1">Потребительский</option>
+                <option data-koef="0.9">Промышленный</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc__item">
+            <div class="calc__item-title">Город отправки:</div>
+
+            <div class="select">
+              <select class="city">
+                <option data-koef="1">Москва</option>
+                <option data-koef="1.1">Ростов</option>
+                <option data-koef="1.2">Петербург</option>
+                <option data-koef="1.5">Новосибирск</option>
+                <option data-koef="1.35">Уфа</option>
+                <option data-koef="1.05">Краснодар</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc__item">
+            <div class="calc__item-title">Вариант отправки:</div>
+
+            <div class="select">
+              <select class="variant">
+                <option data-koef="0.9">Авиа 7-10 дней</option>
+                <option data-koef="1">Авиа 2-3 дня</option>
+                <option data-koef="0.65">Почта</option>
+                <option data-koef="0.7">Курьер</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc__item">
+            <div class="calc__item-title">Ввод данных</div>
+
+            <div class="calc__item-input">
+              <span>Габариты груза(см):</span>
+
+              <input class="width" type="number" min="1" data-koef="0.1">
+
+              <span>X</span>
+
+              <input class="length" type="number" min="1" data-koef="0.1">
+
+              <span>X</span>
+
+              <input class="height" type="number" min="1" data-koef="0.1">
+
+              <span>Вес:</span>
+
+              <input class="weight" type="number" min="1" data-koef="10">
+
+              <span>Объем:</span>
+
+              <input class="size" type="number" min="1" data-koef="10">
+            </div>
+          </div>
+        </div>
+
+        <button class="button calculation__inner-button">Рассчитать</button>
+      </div>
+    </section>
   </main>
 
   <footer>

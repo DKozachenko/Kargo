@@ -17,7 +17,8 @@ header,
 main,
 footer,
 .home,
-.description
+.description,
+.calculation
   grid-column-start: 1
   grid-column-end: -1
 
@@ -37,7 +38,8 @@ section
   main,
   footer,
   .home,
-  .description
+  .description,
+  .calculation  
     grid-template-columns: 5% 1fr 5%  
 
 @media (max-width: 768px)  
@@ -49,7 +51,8 @@ section
   main,
   footer,
   .home ,
-  .description   
+  .description,
+  .calculation   
     grid-template-columns: 3% 1fr 3%    
 
 @media (max-width: 446px)  
@@ -60,3 +63,4 @@ section
 @import "header"  
 @import "home"  
 @import "description"  
+@import "calculation"  
