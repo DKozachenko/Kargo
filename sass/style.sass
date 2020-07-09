@@ -20,7 +20,8 @@ footer,
 .description,
 .calculation,
 .delivery,
-.agent
+.agent,
+.advantages
   grid-column-start: 1
   grid-column-end: -1
 
@@ -29,7 +30,6 @@ footer,
 
 section 
   padding: 3.5rem 0 4.5rem 0 
-
 
 @media (max-width: 1245px)
   body 
@@ -43,7 +43,8 @@ section
   .description,
   .calculation,
   .delivery,
-  .agent
+  .agent,
+  .advantages
     grid-template-columns: 5% 1fr 5%  
 
 @media (max-width: 768px)  
@@ -58,7 +59,8 @@ section
   .description,
   .calculation,
   .delivery,
-  .agent   
+  .agent,
+  .advantages   
     grid-template-columns: 3% 1fr 3%    
 
 @media (max-width: 446px)  
@@ -72,3 +74,4 @@ section
 @import "calculation"  
 @import "delivery"  
 @import "agent"  
+@import "advantages"  
