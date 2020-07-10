@@ -24,6 +24,9 @@
   display: flex
   align-items: center
 
+  &:not(:nth-child(7))
+    margin-bottom: 1rem
+
   &__text
     width: 100%
     max-width: 45rem
@@ -64,7 +67,106 @@
 .line
   position: absolute
   left: 50%
-  top: 1rem
+  top: 1.5rem
   z-index: 1
 
   transform: translateX(-50%)
+
+  width: 0.1rem
+  height: 45.5rem
+
+  background: #C1C4C7
+
+  &__inner 
+    width: 100%
+    height: 100%
+
+    position: relative
+
+    &-box 
+      position: absolute
+      z-index: 1
+      left: 50%
+
+      transform: translateX(-50%)
+
+      width: 2.7rem
+      height: 2.7rem
+      background: #F3F3F3
+
+      border: 1px solid #C1C4C7
+      border-radius: 50%
+
+      +font('Open Sans', 400, 1.3rem)
+      color: #C1C4C7
+
+      display: flex
+      justify-content: center
+      align-items: center
+
+      transition: all .2s linear
+
+      &.box_active 
+        background: blue
+        border-color: blue
+        transform: scale(1.2) translateX(-40%)
+
+        color: white
+
+      &:nth-child(1)
+        top: 0
+
+      &:nth-child(2)
+        top: 7rem  
+
+      &:nth-child(3)
+        top: 14rem
+
+      &:nth-child(4)
+        top: 21rem  
+
+      &:nth-child(5)
+        top: 28rem   
+
+      &:nth-child(6)
+        top: 35rem   
+
+      &:nth-child(7)
+        bottom: 0    
+
+@media (max-width: 1390px)
+  .point__text 
+    max-width: 38rem
+    
+@media (max-width: 1220px)
+  .point__text 
+    max-width: 33rem
+
+@media (max-width: 1100px)
+  .point 
+    margin-bottom: 2rem
+
+    width: 100%
+
+    &__text 
+      max-width: none
+
+    &:nth-child(odd),
+    &:nth-child(even)      
+      align-self: auto
+
+    &:nth-child(odd)
+      .point__img 
+        order: 0  
+
+        margin-right: 2rem
+
+      .point__text 
+        order: 1  
+
+        text-align: left
+
+        margin-right: 0
+
+  .line
+    display: none        

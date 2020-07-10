@@ -9,7 +9,10 @@ const extradition = document.querySelector('.extradition'),
   height = document.querySelector('.height'),
   weight = document.querySelector('.weight'),
   size = document.querySelector('.size'),
-  calculationInnerButton = document.querySelector('.calculation__inner-button');
+  calculationInnerButton = document.querySelector('.calculation__inner-button'),
+
+  points = document.querySelectorAll('.point'),
+  lineInnerBox = document.querySelectorAll('.line__inner-box');
 
 const findOption = (select) => {
   for (let i = 0; i < select.length; i++) {
@@ -17,6 +20,18 @@ const findOption = (select) => {
       return select[i];
     }
   }
+}
+
+const lightOn = (event) => {  
+  const number = event.target.closest('.point').dataset.num - 1;
+
+  lineInnerBox[number].classList.add('box_active');
+}
+
+const lightOff = (event) => {
+  const number = event.target.closest('.point').dataset.num - 1;
+
+  lineInnerBox[number].classList.remove('box_active');
 }
 
 calculationInnerButton.addEventListener('click', () => {
@@ -40,5 +55,14 @@ calculationInnerButton.addEventListener('click', () => {
     alert('Вы ввели не все данные или недопустимые значения');
   }
 });  
+
+points.forEach((item) => {
+  item.addEventListener('mouseover', () => {
+    lightOn(event)
+  });
+  item.addEventListener('mouseout', () => {
+    lightOff(event);
+  });
+})
 
 
