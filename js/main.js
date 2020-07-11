@@ -63,4 +63,8 @@ points.forEach((item) => {
   item.addEventListener('mouseout', () => {
     lightOff(event);
   });
-})
+});
+
+
+
+
