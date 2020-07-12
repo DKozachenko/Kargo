@@ -1,0 +1,56 @@
+.cheking 
+  padding-top: 0
+
+  &__inner
+    grid-column-start: 2
+    grid-column-end: 3
+
+    display: flex
+    flex-direction: column
+
+    .title 
+      text-align: center
+
+      margin-bottom: 2rem
+
+    &-content 
+      display: flex
+      justify-content: center
+
+      background: url(../css/images/cheking/bg.png) 0 0 no-repeat
+      background-size: contain
+
+      padding: 12rem 0 5rem 0
+
+      input 
+        max-width: 26rem
+        width: 100%
+
+        &:first-child
+          margin-right: 1rem
+
+    .button 
+      align-self: center  
+
+      position: relative
+      top: -2.5rem   
+
+@media (max-width: 1310px)
+  .cheking__inner-content
+    background: none
+    padding: 2rem 1rem
+    margin-bottom: 2rem
+    border: 1px solid #E93B3B
+
+  .cheking__inner 
+    .button 
+      position: static  
+
+@media (max-width: 650px)    
+  .cheking__inner-content  
+    flex-wrap: wrap
+
+    input
+      &:first-child
+        margin-right: 0
+        margin-bottom: 1rem

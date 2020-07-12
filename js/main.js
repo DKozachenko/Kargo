@@ -12,7 +12,12 @@ const extradition = document.querySelector('.extradition'),
   calculationInnerButton = document.querySelector('.calculation__inner-button'),
 
   points = document.querySelectorAll('.point'),
-  lineInnerBox = document.querySelectorAll('.line__inner-box');
+  lineInnerBox = document.querySelectorAll('.line__inner-box'),
+  
+  chekingInnerButton = document.querySelector('.cheking__inner-button'),
+  chekingInnerInput1 = document.querySelector('.cheking__inner-content > input:first-child'),
+  chekingInnerInput2 = document.querySelector('.cheking__inner-content > input:last-child'),
+  masOfPhrase = ['в пути', 'на середине пути', 'скоро прибудет в пункт назначения', 'только выехал', 'ожидает', 'на таможне'];
 
 const findOption = (select) => {
   for (let i = 0; i < select.length; i++) {
@@ -20,6 +25,10 @@ const findOption = (select) => {
       return select[i];
     }
   }
+}
+
+const randomInteger = (min, max) => {
+  return Math.floor(min + Math.random() * (max + 1 - min));
 }
 
 const lightOn = (event) => {
@@ -64,6 +73,17 @@ points.forEach((item) => {
     lightOff(event);
   });
 });
+
+chekingInnerButton.addEventListener('click', () => {
+  const curCode = chekingInnerInput1.value;
+  const curNumber = chekingInnerInput2.value;
+
+  if (curCode > 0 && curNumber > 0 ) {
+    alert(`Заказ с номером: ${curNumber} ${masOfPhrase[randomInteger(0, 5)]}`);
+  } else {
+    alert('Вы ввели не все данные или недопустимые значения');
+  }
+})
 
 
 
