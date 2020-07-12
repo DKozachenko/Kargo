@@ -18,90 +18,94 @@
 
       padding: 0 7rem
 
-.item 
-  display: flex
-  flex-direction: column
-  align-items: center
+      .item 
+        display: flex
+        flex-direction: column
+        align-items: center
 
-  padding: 0 1.5rem 2rem 1.5rem 
+        padding: 0 1.5rem 2rem 1.5rem 
 
-  background: white
+        background: white
 
-  input 
-    width: 100%
+        input 
+          width: 100%
 
-    &:not(:nth-child(6))  
-      margin-bottom: 0.3rem
+          &:not(:nth-child(6))  
+            margin-bottom: 0.3rem
 
-    &:nth-child(6)
-      margin-bottom: 1.5rem  
+          &:nth-child(6)
+            margin-bottom: 1.5rem  
 
-  .button
-    margin-bottom: 1rem    
+        .button
+          margin-bottom: 1rem    
 
-  &__title 
-    +font('Open Sans', 700, 1.6rem)      
-    color: white
-    text-transform: uppercase
+        &__title 
+          +font('Open Sans', 700, 1.6rem)      
+          color: white
+          text-transform: uppercase
 
-    background: $blue
-    padding: 2rem
-    text-align: center
+          background: $blue
+          padding: 2rem
+          text-align: center
 
-    width: 111%
+          width: 111%
 
-    margin-bottom: 1rem 
+          margin-bottom: 1rem 
 
-    position: relative
-    left: 0
+          position: relative
+          left: 0
 
-  &__img 
-    margin-bottom: 0.4rem
+        &__img 
+          margin-bottom: 0.4rem
 
-    min-height: 6.1rem
+          min-height: 6.1rem
 
-    display: flex
-    align-items: center
-      
+          display: flex
+          align-items: center
+            
 
-  &__description 
-    text-align: center
-    margin-bottom: 2.3rem
+        &__description 
+          text-align: center
+          margin-bottom: 2.3rem
 
-    p
-      &:first-child
-        +font('Open Sans', 600, 1.8rem)  
-        color: #3A3A3A  
-        text-transform: uppercase
+          p
+            &:first-child
+              +font('Open Sans', 600, 1.8rem)  
+              color: #3A3A3A  
+              text-transform: uppercase
 
-      &:last-child
-        +font('Open Sans', 600, 2.8rem)   
-        color: $red
+            &:last-child
+              +font('Open Sans', 600, 2.8rem)   
+              color: $red
 
-  &__notice
-    +font('Open Sans', 300, 1.3rem)  
-    color: #616467  
-    text-align: center
+        &__notice
+          +font('Open Sans', 300, 1.3rem)  
+          color: #616467  
+          text-align: center
 
-    width: 100%
-    max-width: 20rem     
+          width: 100%
+          max-width: 20rem     
 
 @media (max-width: 1249px)
-  .item__title 
-    width: 107%
+  .delivery__inner-content
+    .item__title 
+      width: 107%
       
 @media (max-width: 881px)
-  .item__title 
-    width: 105.5%    
+  .delivery__inner-content
+    .item__title 
+      width: 105.5%    
 
 @media (max-width: 630px)
-  .item__title 
-    width: 108%       
+  .delivery__inner-content
+    .item__title 
+      width: 108%       
 
 @media (max-width: 480px)
   .delivery__inner-content
     padding: 0 2rem
 
 @media (max-width: 340px)
-  .item__title 
-    width: 111% 
+  .delivery__inner-content
+    .item__title 
+      width: 111% 

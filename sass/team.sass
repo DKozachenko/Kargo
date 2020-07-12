@@ -1,0 +1,65 @@
+.team 
+  background: #F3F3F3
+  padding: 4rem 0 6rem 0
+
+  &__inner 
+    grid-column-start: 2
+    grid-column-end: 3
+
+    .title 
+      text-align: center
+
+      margin-bottom: 3rem
+
+    &-content 
+      +grid(32rem, 2.5rem)  
+
+      .item 
+        display: flex
+        align-items: flex-end
+
+        height: 26rem
+
+        &:last-child
+          grid-column: 2
+
+        &__text 
+          position: relative
+
+          padding: 3.2rem 3rem 
+          background: white
+
+          width: 100%
+
+          img 
+            position: absolute
+            top: -13.5rem
+            left: 50%
+            z-index: 1
+
+            transform: translateX(-50%)
+
+          p 
+            &:nth-child(2)
+              +font('Open Sans', 700, 1.6rem)
+              color: $red
+              text-transform: uppercase  
+              text-align: center
+
+              margin-bottom: 0.4rem
+
+            &:last-child
+              +font('Open Sans', 300, 1.4rem)  
+              color: #3A3A3A
+              text-align: center
+              line-height: 1.9rem
+
+@media (max-width: 1262px)
+  .team__inner-content 
+    .item
+      &:last-child
+        grid-column: auto
+
+@media (max-width: 370px)  
+  .team__inner-content 
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
