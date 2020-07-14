@@ -17,7 +17,12 @@ const extradition = document.querySelector('.extradition'),
   chekingInnerButton = document.querySelector('.cheking__inner-button'),
   chekingInnerInput1 = document.querySelector('.cheking__inner-content > input:first-child'),
   chekingInnerInput2 = document.querySelector('.cheking__inner-content > input:last-child'),
-  masOfPhrase = ['в пути', 'на середине пути', 'скоро прибудет в пункт назначения', 'только выехал', 'ожидает', 'на таможне'];
+  masOfPhrase = ['в пути', 'на середине пути', 'скоро прибудет в пункт назначения', 'только выехал', 'ожидает', 'на таможне'],
+
+  newsInnerContent = document.querySelector('.news__inner-content'),
+  newsItems = document.querySelectorAll('.news__inner-content > .item'),
+  newsInnerButton = document.querySelector('.news__inner-button');
+  let counterNews = 0;
 
 const findOption = (select) => {
   for (let i = 0; i < select.length; i++) {
@@ -83,6 +88,26 @@ chekingInnerButton.addEventListener('click', () => {
   } else {
     alert('Вы ввели не все данные или недопустимые значения');
   }
+})
+
+newsInnerButton.addEventListener('click', () => {
+  // if (counterNews <= 9) {
+  //   newsItems.forEach((item) => {
+  //     let el = document.createElement('div');
+  //     el.innerHTML = "Hello world";
+  //     el.style.background = 'red';
+  //     el.style.width = '200px';
+  //     el.style.height = '200px';
+
+  //     newsInnerContent.insertAdjacentElement('beforeend', item)
+  //     console.log(item);
+  //     counterNews++;
+  //   })
+  //   console.log(counterNews);
+  // } else {
+  //   newsInnerButton.display = 'none';
+  // }
+
 })
 
 
