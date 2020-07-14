@@ -33,6 +33,49 @@
 
       margin-bottom: 4.5rem
 
+      .form 
+        flex-basis: 51%
+        margin-right: 2.5rem
+
+        display: flex
+        flex-direction: column
+
+        &__text 
+          text-align: center
+
+          padding: 1.5rem 3rem
+          background: $blue
+
+          span
+            +font('Open Sans', 700, 1.9rem)     
+            text-transform: uppercase  
+
+            margin-bottom: 0.4rem
+
+          p
+            +font('Open Sans', 600, 1.4rem)     
+            text-transform: uppercase   
+
+        &__content
+          padding: 1.5rem 1.5rem 2.5rem 1.5rem
+
+          background: rgba(255, 255, 255, .7)  
+
+          display: flex
+          flex-direction: column
+          align-items: center 
+
+          input 
+            width: 100%
+
+            margin-bottom: 0.3rem
+
+          textarea 
+            width: 100%
+            height: 6.5rem    
+
+            margin-bottom: 1.5rem
+
       &__video 
         position: relative
 
@@ -45,7 +88,53 @@
             z-index: 1
 
     &-down 
-      cursor: pointer        
+      cursor: pointer
+
+  .social 
+    position: absolute
+    right: 3.5rem
+    top: 50%
+    z-index: 1
+
+    transform: translateY(-50%)
+
+    &__icon
+      width: 4.5rem
+      height: 4.5rem
+
+      display: flex
+      align-items: center
+      justify-content: center
+
+      transition: all .2s linear
+
+      &:first-child
+        background: #57A1D0
+
+        &:hover 
+          background: darken(#57A1D0, 10%)
+          border-radius: .5rem
+
+      &:nth-child(2)
+        background: #4984AD  
+
+        &:hover 
+          background: darken(#4984AD, 10%)
+          border-radius: .5rem
+
+      &:last-child
+        background: #E93B3B 
+
+        &:hover 
+          background: darken(#E93B3B, 10%)
+          border-radius: .5rem
+
+      &:not(:last-child)
+        margin-bottom: 0.4rem
+
+      img 
+        width: 2rem      
+        height: 2rem            
 
 .mainheader
   position: absolute  
@@ -170,96 +259,7 @@
           background: lighten(gray, 10%)
 
         &:not(:last-child)
-          border-bottom: 1px solid white
-
-.form 
-  flex-basis: 51%
-  margin-right: 2.5rem
-
-  display: flex
-  flex-direction: column
-
-  &__text 
-    text-align: center
-
-    padding: 1.5rem 3rem
-    background: $blue
-
-    span
-      +font('Open Sans', 700, 1.9rem)     
-      text-transform: uppercase  
-
-      margin-bottom: 0.4rem
-
-    p
-      +font('Open Sans', 600, 1.4rem)     
-      text-transform: uppercase   
-
-  &__content
-    padding: 1.5rem 1.5rem 2.5rem 1.5rem
-
-    background: rgba(255, 255, 255, .7)  
-
-    display: flex
-    flex-direction: column
-    align-items: center 
-
-    input 
-      width: 100%
-
-      margin-bottom: 0.3rem
-
-    textarea 
-      width: 100%
-      height: 6.5rem    
-
-      margin-bottom: 1.5rem
-
-.social 
-  position: absolute
-  right: 3.5rem
-  top: 50%
-  z-index: 1
-
-  transform: translateY(-50%)
-
-  &__icon
-    width: 45px
-    height: 45px
-
-    display: flex
-    align-items: center
-    justify-content: center
-
-    transition: all .2s linear
-
-    &:first-child
-      background: #57A1D0
-
-      &:hover 
-        background: darken(#57A1D0, 10%)
-        border-radius: .5rem
-
-    &:nth-child(2)
-      background: #4984AD  
-
-      &:hover 
-        background: darken(#4984AD, 10%)
-        border-radius: .5rem
-
-    &:last-child
-      background: #E93B3B 
-
-      &:hover 
-        background: darken(#E93B3B, 10%)
-        border-radius: .5rem
-
-    &:not(:last-child)
-      margin-bottom: 0.4rem
-
-    img 
-      width: 2rem      
-      height: 2rem  
+          border-bottom: 1px solid white  
 
 .burger 
   display: none
@@ -311,18 +311,16 @@
 
       transition: all .2s linear
 
-
-
 @media (max-width: 1330px)
   .home__inner-content
     flex-wrap: wrap
 
     justify-content: center
 
-  .form 
-    margin-bottom: 2rem  
+    .form 
+      margin-bottom: 2rem  
 
-    margin-right: 0
+      margin-right: 0
 
 @media (max-width: 1135px) 
   .nav
@@ -340,19 +338,22 @@
   .home 
     overflow-x: hidden
 
-  .form 
-    flex-basis: 70%   
+  .home__inner-content 
+    .form 
+      flex-basis: 70%   
 
 @media (max-width: 768px)
-  .form 
-    margin-right: auto   
+  .home__inner-content 
+    .form 
+      margin-right: auto   
 
 @media (max-width: 370px)
-  .form 
-    flex-basis: 75%  
+  .home__inner-content 
+    .form 
+      flex-basis: 75%  
 
-    &__text 
-      padding: 1.5rem 2rem    
+      &__text 
+        padding: 1.5rem 2rem    
 
   .social 
     right: 1.5rem            

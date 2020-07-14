@@ -1,0 +1,85 @@
+.footer 
+  background: $blue
+
+  &__inner 
+    grid-column-start: 2
+    grid-column-end: 3
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+
+    .mainheader__logo
+      color: white
+
+    &-content 
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+      width: 100%
+      max-width: 51rem
+
+      height: 5.5rem
+
+      .count,
+      .trace,
+      .phone,
+      .mail
+        margin: 0  
+
+    .social 
+      display: flex
+
+      &__icon
+        width: 3.6rem
+        height: 3.6rem
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        transition: all .2s linear
+
+        border: 1px solid #D3D6D8
+        border-radius: 2px
+
+        &:not(:last-child)
+          margin-right: 0.5rem
+
+        &:hover 
+          background: #D3D6D8   
+
+        img 
+          width: 1.8rem
+          height: 1.8rem  
+
+@media (max-width: 1254px)
+  .footer__inner-content 
+    max-width: 45rem         
+
+@media (max-width: 1158px)
+  body 
+    grid-template-rows: 12vh 1fr 22vh   
+
+@media (max-width: 812px)
+  body 
+    grid-template-rows: 12vh 1fr 33vh       
+
+  .footer__inner 
+    justify-content: center  
+
+@media (max-width: 540px)
+  .footer__inner-content
+    max-width: none    
+
+  .footer__inner-content .count, 
+  .footer__inner-content .trace, 
+  .footer__inner-content .phone, 
+  .footer__inner-content .mail
+    margin-bottom: 0.5rem
+
+@media (max-width: 372px)
+  body 
+    grid-template-rows: 12vh 1fr 45vh     

@@ -1,0 +1,93 @@
+.contacts 
+  background: url(../css/images/contacts/bg2.png) center no-repeat, url(../css/images/contacts/bg.jpg) center no-repeat
+  background-size: cover 
+
+  padding: 6rem 0 8rem 0
+
+  &__inner 
+    grid-column-start: 2
+    grid-column-end: 3
+
+    .form 
+      width: 100%
+      max-width: 90rem
+
+      margin: 0 auto
+
+      &__text 
+        width: 100%
+        background: $blue
+
+        padding: 1.5rem 
+
+        text-align: center
+        text-transform: uppercase
+
+        p 
+          &:first-child
+            +font('Open Sans', 700, 1.9rem)
+            color: white
+
+            margin-bottom: 0.5rem
+
+          &:last-child
+            +font('Open Sans', 600, 1.4rem)
+            color: white  
+
+      &__content 
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+        padding: 1.5rem 1.5rem 2rem 1.5rem
+
+        background: rgba(255, 255, 255, .7)
+
+        input 
+          max-width: 28rem
+          width: 100%    
+
+        textarea 
+          width: 100%
+
+          margin: 1rem 0 1.5rem 0    
+
+        .button
+          margin: 0 auto
+
+@media (max-width: 1087px)
+  .contacts__inner 
+    .form 
+      &__content
+        input 
+          max-width: 25rem            
+
+@media (max-width: 974px)
+  .contacts__inner 
+    .form 
+      &__content
+        input 
+          max-width: 20rem
+
+@media (max-width: 787px)
+  .contacts__inner 
+    .form 
+      &__content
+        justify-content: center
+
+        input 
+          margin-bottom: 1rem
+          margin-right: 1rem  
+
+        textarea 
+          margin-top: 0   
+
+@media (max-width: 478px)                      
+  .contacts__inner 
+    .form 
+      &__content
+        input 
+          max-width: none
+          width: 100%  
+
+          margin-right: 0
