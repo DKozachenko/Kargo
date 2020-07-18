@@ -6,8 +6,6 @@
   <title>Kargo</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto+Condensed:wght@400;700&display=swap"
     rel="stylesheet">
-  <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.css"> -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -46,14 +44,14 @@
     <section class="home">
       <div class="home__inner">
         <div class="mainheader">
-          <div class="mainheader__logo">
-            <div class="mainheader__logo-img">
+          <div class="logo">
+            <div class="logo-img">
               <img src="css/images/home/china.png" alt="china">
 
               <img src="css/images/home/russia.png" alt="russia">
             </div>
 
-            <div class="mainheader__logo-text">
+            <div class="logo-text">
               <span>1KARGO.RU</span>
 
               <p>Перевозки из Китая в Россию</p>
@@ -61,7 +59,7 @@
           </div>
 
           <nav class="nav">
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link" data-link="header">
               <span>Главная</span>
 
               <img src="css/images/home/arrow.png" alt="arrow">
@@ -75,7 +73,7 @@
               </ul>
             </a>
 
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link" data-link="delivery">
               <span>Доставка</span>
 
               <img src="css/images/home/arrow.png" alt="arrow">
@@ -89,7 +87,7 @@
               </ul>
             </a>
 
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link" data-link="ways">
               <span>Услуги в Китае</span>
 
               <img src="css/images/home/arrow.png" alt="arrow">
@@ -103,7 +101,7 @@
               </ul>
             </a>
 
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link" data-link="licenses">
               <span>Инфо</span>
 
               <img src="css/images/home/arrow.png" alt="arrow">
@@ -117,7 +115,7 @@
               </ul>
             </a>
 
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link" data-link="news">
               <span>Новости</span>
 
               <img src="css/images/home/arrow.png" alt="arrow">
@@ -131,7 +129,7 @@
               </ul>
             </a>
 
-            <a href="#" class="nav__link">
+            <a href="#" class="nav__link" data-link="contacts">
               <span>Контакты</span>
 
               <img src="css/images/home/arrow.png" alt="arrow">
@@ -170,14 +168,34 @@
 
               <textarea placeholder="Сообщение..."></textarea>
 
-              <button class="button">Отправить заявку</button>
+              <button class="button modal__button">Отправить заявку</button>
             </div>
           </form>
 
           <div class="home__inner-content__video">
-            <img src="css/images/home/video.png" alt="video">
-            
-            <img src="css/images/home/manage.png" alt="manage">
+            <video src="css/images/video.mp4" poster="css/images/home/video.png"></video>
+
+            <div class="manage">
+              <div class="manage__play"></div>
+
+              <div class="manage__time">121</div>
+
+              <div class="manage__timeline">
+                <img src="css/images/home/circle.png" alt="circle">
+              </div>
+
+              <div class="manage__volume">
+                <img src="css/images/home/volume.png" alt="volume">
+              </div>
+
+              <div class="manage__quality">
+                <img src="css/images/home/quality.png" alt="quality">
+              </div>
+
+              <div class="manage__fullscrin">
+                <img src="css/images/home/fullscrin.png" alt="fullscrin">
+              </div>
+            </div>
           </div>
         </div>
 
@@ -342,73 +360,79 @@
           <div class="delivery__inner-content__item item">
             <div class="item__title">Экспресс доставка</div>
 
-            <div class="item__img">
-              <img src="css/images/delivery/plan.png" alt="">
+            <div class="item__content">
+              <div class="item__content-img">
+                <img src="css/images/delivery/plan.png" alt="">
+              </div>
+
+              <div class="item__content-description">
+                <p>За 9 дней из Гуанчжоу</p>
+
+                <p>9$ - 1кг</p>
+              </div>
+
+              <input type="text" placeholder="Ваше имя...">
+
+              <input type="text" placeholder="Ваше телефон...">
+
+              <input type="text" placeholder="Ваш email...">
+
+              <button class="button modal__button">Отправить заявку</button>
+
+              <div class="item__content-notice">Наш менеджер перезвонит Вам в ближайшее время</div>
             </div>
-
-            <div class="item__description">
-              <p>За 9 дней из Гуанчжоу</p>
-
-              <p>9$ - 1кг</p>
-            </div>
-
-            <input type="text" placeholder="Ваше имя...">
-
-            <input type="text" placeholder="Ваше телефон...">
-
-            <input type="text" placeholder="Ваш email...">
-
-            <button class="button">Отправить заявку</button>
-
-            <div class="item__notice">Наш менеджер перезвонит Вам в ближайшее время</div>
           </div>
 
           <div class="delivery__inner-content__item item">
             <div class="item__title">Авто-Ж.Д. доставка</div>
 
-            <div class="item__img">
-              <img src="css/images/delivery/train.png" alt="">
+            <div class="item__content">
+              <div class="item__content-img">
+                <img src="css/images/delivery/train.png" alt="">
+              </div>
+
+              <div class="item__content-description">
+                <p>За 18 дней из Гуанчжоу</p>
+
+                <p>3$ - 1кг</p>
+              </div>
+
+              <input type="text" placeholder="Ваше имя...">
+
+              <input type="text" placeholder="Ваше телефон...">
+
+              <input type="text" placeholder="Ваш email...">
+
+              <button class="button modal__button">Отправить заявку</button>
+
+              <div class="item__content-notice">Наш менеджер перезвонит Вам в ближайшее время</div>
             </div>
-
-            <div class="item__description">
-              <p>За 18 дней из Гуанчжоу</p>
-
-              <p>3$ - 1кг</p>
-            </div>
-
-            <input type="text" placeholder="Ваше имя...">
-
-            <input type="text" placeholder="Ваше телефон...">
-
-            <input type="text" placeholder="Ваш email...">
-
-            <button class="button">Отправить заявку</button>
-
-            <div class="item__notice">Наш менеджер перезвонит Вам в ближайшее время</div>
           </div>
 
           <div class="delivery__inner-content__item item">
             <div class="item__title">Доставка морем</div>
 
-            <div class="item__img">
-              <img src="css/images/delivery/ship.png" alt="">
+            <div class="item__content">
+              <div class="item__content-img">
+                <img src="css/images/delivery/ship.png" alt="">
+              </div>
+
+              <div class="item__content-description">
+                <p>За 35 дней из ИУ</p>
+
+                <p>2$ - 1кг</p>
+              </div>
+
+              <input type="text" placeholder="Ваше имя...">
+
+              <input type="text" placeholder="Ваше телефон...">
+
+              <input type="text" placeholder="Ваш email...">
+
+              <button class="button modal__button">Отправить заявку</button>
+
+              <div class="item__content-notice">Наш менеджер перезвонит Вам в ближайшее время</div>
             </div>
-
-            <div class="item__description">
-              <p>За 35 дней из ИУ</p>
-
-              <p>2$ - 1кг</p>
-            </div>
-
-            <input type="text" placeholder="Ваше имя...">
-
-            <input type="text" placeholder="Ваше телефон...">
-
-            <input type="text" placeholder="Ваш email...">
-
-            <button class="button">Отправить заявку</button>
-
-            <div class="item__notice">Наш менеджер перезвонит Вам в ближайшее время</div>
           </div>
         </div>
       </div>
@@ -543,6 +567,14 @@
         <div class="title">Отзывы наших клиентов</div>
 
         <div class="reviews__inner-slider">
+          <div class="left">
+            <img src="css/images/reviews/left-arrow.png" alt="left">
+          </div>
+
+          <div class="right">
+            <img src="css/images/reviews/right-arrow.png" alt="right">
+          </div>
+
           <div class="reviews__inner-slider__item item">
             <div class="item__img">
               <img src="css/images/reviews/1.png" alt="Olga">
@@ -562,14 +594,14 @@
             </div>
           </div>
 
-          <!-- <div class="reviews__inner-slider__item item">
+          <div class="reviews__inner-slider__item item">
             <div class="item__img">
               <img src="css/images/reviews/1.png" alt="Olga">
             </div>
 
             <div class="item__name">Ольга - директор тур.агентства "Курортный роман"</div>
 
-            <a href="#" class="item__link">www.kurort_roman.ru</a>
+            <a href="#" class="item__link">www.google.com</a>
 
             <div class="item__text">
               <p>Спасибо менеджерам из «1Карго» за нашу свадьбу! Без вашей помощи мы бы не справились. Вы сэкономили нам
@@ -598,7 +630,7 @@
 
             <div class="item__name">Ольга - директор тур.агентства "Курортный роман"</div>
 
-            <a href="#" class="item__link">www.kurort_roman.ru</a>
+            <a href="#" class="item__link">www.yandex.ru</a>
 
             <div class="item__text">
               <p>Спасибо менеджерам из «1Карго» за нашу свадьбу! Без вашей помощи мы бы не справились. Вы сэкономили нам
@@ -617,9 +649,9 @@
                 ленты, воздушные шары и даже лепестки роз! А так как весит это все очень немного, то мы порадовались
                 низкой цене за доставку. Пришло все тоже очень быстро. Поэтому у нас осталось достаточно времени, чтобы
                 все примерить и подогнать некоторые наряды по фигуре. </p>
-            </div> -->
-          </div>          
-        </div>
+            </div>
+          </div>
+        </div>          
       </div>
     </section>
 
@@ -1059,7 +1091,7 @@
 
             <textarea placeholder="Сообщение..."></textarea>
 
-            <button class="button">Отправить заявку</button>
+            <button class="button modal__button">Отправить заявку</button>
           </div>
         </form>
       </div>
@@ -1068,14 +1100,14 @@
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="mainheader__logo">
-        <div class="mainheader__logo-img">
+      <div class="logo">
+        <div class="logo-img">
           <img src="css/images/home/china.png" alt="china">
 
           <img src="css/images/home/russia.png" alt="russia">
         </div>
 
-        <div class="mainheader__logo-text">
+        <div class="logo-text">
           <span>1KARGO.RU</span>
 
           <p>Перевозки из Китая в Россию</p>
@@ -1132,9 +1164,24 @@
     </div>
   </footer>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/owl.carousel.min.js"></script> -->
+  <div class="modal">
+    <div class="modal__wrapper">
+      <div class="modal__wrapper-window window">
+        <div class="window__header">
+          <span></span>
+
+          <div class="close">
+            <img src="css/images/modal/close.svg" alt="close">
+          </div> 
+        </div>
+
+        <div class="window__content">
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>

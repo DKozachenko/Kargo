@@ -9,12 +9,35 @@
       margin-bottom: 2rem
 
     &-slider  
+      position: relative
+
+      .left,
+      .right 
+        width: 1.4rem
+        height: 4.6rem
+
+        position: absolute
+        top: 3rem
+        z-index: 1
+        
+        cursor: pointer
+
+      .left
+        left: 41% 
+
+      .right 
+        left: 58%
+
       .item
         display: flex
         flex-direction: column
         align-items: flex-start
 
         padding: 0
+
+        &:nth-child(4),
+        &:nth-child(5)
+          display: none
 
         &__img 
           align-self: center
@@ -44,3 +67,27 @@
           +font('Open Sans', 400, 1.4rem)
           color: #3A3A3A 
           line-height: 2.2rem   
+
+@media (max-width: 1085px)
+  .reviews__inner-slider 
+    .left      
+      left: 37%
+
+    .right 
+      left: 62%  
+
+@media (max-width: 660px)
+  .reviews__inner-slider 
+    .left      
+      left: 29%
+
+    .right 
+      left: 69%  
+
+@media (max-width: 430px)
+  .reviews__inner-slider 
+    .left      
+      left: 23%
+
+    .right 
+      left: 75%            

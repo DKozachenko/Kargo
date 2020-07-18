@@ -27,18 +27,21 @@
 
     &-content
       display: flex
-      justify-content: space-between 
+      justify-content: space-between
+      align-items: center
 
       width: 100% 
 
       margin-bottom: 4.5rem
 
       .form 
-        flex-basis: 51%
         margin-right: 2.5rem
 
         display: flex
         flex-direction: column
+
+        width: 100%
+        max-width: 31.5rem
 
         &__text 
           text-align: center
@@ -78,14 +81,89 @@
 
       &__video 
         position: relative
+        flex-basis: 72%
 
-        img 
-          &:last-child 
-            position: absolute
-            bottom: 0
-            left: 0
-            right: 0
-            z-index: 1
+        display: flex
+        align-items: center
+
+        video 
+          width: 100%
+          height: 40rem
+
+
+        &.video_full 
+          position: absolute
+          top: -7%
+          left: -13%
+          width: 126%
+          height: 100vh
+          background: black
+          z-index: 7
+          display: flex
+          align-items: center
+          justify-content: center
+
+          .manage
+            width: 55%
+
+            left: 50%
+            transform: translateX(-50%)
+
+        .manage
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+
+          background: $blue
+          z-index: 1
+
+          display: flex
+          align-items: center
+          justify-content: space-between
+
+          padding: 1rem 1.5rem
+
+          &__play 
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 7px 0 7px 10px
+            border-color: transparent transparent transparent $red
+
+            &:hover
+              cursor: pointer
+
+          &__time 
+            +font('Roboto', 100, 1.2rem) 
+            color: white 
+
+          &__timeline
+            width: 100%
+            max-width: 59.5rem
+            height: .6rem
+
+            background: rgba(255, 255, 255, .3)
+
+            position: relative
+
+            img
+              position: absolute
+              left: -.5rem
+              top: 50%
+              z-index: 1
+
+              transform: translateY(-50%)
+
+              &:hover
+                cursor: pointer    
+                
+          &__volume 
+            cursor: pointer
+
+          &__fullscrin
+            cursor: pointer    
+
 
     &-down 
       cursor: pointer
@@ -148,6 +226,16 @@
 
   padding: 1.5rem 0
 
+  &.mainheader_fixed
+    position: fixed
+    background: $blue
+    padding: 2rem
+
+    z-index: 5
+
+    animation-name: mh_fixed
+    animation-duration: 1s
+
   &::after 
     content: ''
     position: absolute
@@ -161,29 +249,36 @@
 
     transform: translateX(-50%)
 
-  &__logo
-    display: flex
-    align-items: center
+@keyframes mh_fixed
+  0%
+    opacity: 0
 
-    &-img
-      position: relative
+  100%
+    opacity: 1
 
-      margin-right: 5.5rem
+.logo
+  display: flex
+  align-items: center
 
-      img
-        &:last-child
-          position: absolute
-          right: -4rem
-          z-index: 2
+  &-img
+    position: relative
 
-    &-text 
-      span
-        +font('Roboto Condensed', 700, 2.7rem)
-        text-transform: uppercase
+    margin-right: 5.5rem
 
-      p
-        +font('Roboto Condensed', 400, 1.2rem)
-        text-transform: uppercase    
+    img
+      &:last-child
+        position: absolute
+        right: -4rem
+        z-index: 2
+
+  &-text 
+    span
+      +font('Roboto Condensed', 700, 2.7rem)
+      text-transform: uppercase
+
+    p
+      +font('Roboto Condensed', 400, 1.2rem)
+      text-transform: uppercase    
 
 .nav 
   display: flex
@@ -208,7 +303,6 @@
 
       ul 
         top: 1.8rem
-
 
   &__link
     +font('Open Sans', 700, 1.3rem) 
@@ -322,17 +416,81 @@
 
       margin-right: 0
 
+    &__video 
+      flex-basis: 87%  
+
+      &.video_full
+        video 
+          height: 40rem
+
+        .manage__timeline
+          max-width: 45rem  
+
+      video 
+        height: auto
+
+@media (max-width: 1245px)
+  .home__inner-content
+    &__video
+      &.video_full
+        top: -11%       
+
 @media (max-width: 1135px) 
   .nav
     display: none
 
   .burger
-    display: flex     
+    display: flex
+
+@media (max-width: 1103px)
+  .home__inner-content
+    &__video
+      &.video_full
+        top: -9%     
+
+@media (max-width: 1100px)
+  .home__inner-content
+    &__video
+      &.video_full
+        .manage__timeline
+          max-width: 38rem 
+
+  .home__inner-content__video .manage__timeline 
+    max-width: 54.5rem
+
+@media (max-width: 1038px)
+  .home__inner-content
+    &__video
+      &.video_full
+        top: -8%
 
 @media (max-width: 1010px) 
-  .home__inner-content__video
-    img 
-      width: 100%
+  .home__inner-content__video .manage__timeline 
+    max-width: 47.5rem
+
+@media (max-width: 930px) 
+  .home__inner-content__video .manage__timeline 
+    max-width: 40.5rem  
+
+@media (max-width: 900px)
+  .home__inner-content
+    &__video
+      &.video_full
+        padding: 0 5rem
+
+        .manage__timeline
+          max-width: 31rem     
+
+@media (max-width: 830px) 
+  .home__inner-content__video .manage__timeline 
+    max-width: 34.5rem 
+
+@media (max-width: 900px)
+  .home__inner-content
+    &__video
+      &.video_full
+        .manage__timeline
+          max-width: 25rem          
 
 @media (max-width: 768px)
   .home 
@@ -341,11 +499,23 @@
   .home__inner-content 
     .form 
       flex-basis: 70%   
+      margin-right: auto
 
-@media (max-width: 768px)
-  .home__inner-content 
-    .form 
-      margin-right: auto   
+    &__video 
+      .manage__fullscrin 
+        display: none  
+
+@media (max-width: 650px) 
+  .home__inner-content__video .manage__timeline 
+    max-width: 26.5rem 
+
+@media (max-width: 550px) 
+  .home__inner-content__video .manage__timeline 
+    max-width: 20.5rem     
+
+@media (max-width: 440px) 
+  .home__inner-content__video .manage__timeline 
+    max-width: 12rem             
 
 @media (max-width: 370px)
   .home__inner-content 

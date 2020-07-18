@@ -48,6 +48,14 @@ section
   body 
     grid-template-rows: 12vh 1fr 15vh  
 
+@media (max-width: 1158px)
+  body 
+    grid-template-rows: 12vh 1fr 22vh  
+
+@media (max-width: 812px)
+  body 
+    grid-template-rows: 13vh 1fr 33vh       
+
 @media (max-width: 768px)  
   header,
   main,
@@ -73,7 +81,6 @@ section
   .footer
     grid-template-columns: 5% 1fr 5%  
 
-@media (max-width: 768px)  
   body 
     grid-template-rows: 15vh 1fr 15vh 
 
@@ -104,7 +111,11 @@ section
 
 @media (max-width: 446px)  
   body 
-    grid-template-rows: 20vh 1fr 15vh           
+    grid-template-rows: 22vh 1fr 15vh     
+
+@media (max-width: 372px)
+  body 
+    grid-template-rows: 22vh 1fr 45vh          
 
 @import "_global"     
 @import "header"  
@@ -127,3 +138,4 @@ section
 @import "news"  
 @import "contacts"  
 @import "footer"  
+@import "modal"  
